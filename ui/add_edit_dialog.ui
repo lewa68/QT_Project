@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddEditDialog</class>
+ <widget class="QDialog" name="AddEditDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>550</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Добавить/Редактировать фильм</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QLabel" name="dialogTitleLabel">
+     <property name="text">
+      <string>Информация о фильме</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>14</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="titleLabel">
+       <property name="text">
+        <string>Название:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="titleLineEdit">
+       <property name="placeholderText">
+        <string>Введите название фильма</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="yearLabel">
+       <property name="text">
+        <string>Год выпуска:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QSpinBox" name="yearSpinBox">
+       <property name="minimum">
+        <number>1900</number>
+       </property>
+       <property name="maximum">
+        <number>2030</number>
+       </property>
+       <property name="value">
+        <number>2024</number>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="genreLabel">
+       <property name="text">
+        <string>Жанр:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QComboBox" name="genreComboBox">
+       <property name="editable">
+        <bool>true</bool>
+       </property>
+       <item>
+        <property name="text">
+         <string>Боевик</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Комедия</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Драма</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Фантастика</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Ужасы</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Триллер</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Криминал</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Мелодрама</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="directorLabel">
+       <property name="text">
+        <string>Режиссёр:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="directorLineEdit">
+       <property name="placeholderText">
+        <string>Введите имя режиссёра</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="ratingLabel">
+       <property name="text">
+        <string>Рейтинг (0-10):</string>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QDoubleSpinBox" name="ratingSpinBox">
+       <property name="minimum">
+        <double>0.000000000000000</double>
+       </property>
+       <property name="maximum">
+        <double>10.000000000000000</double>
+       </property>
+       <property name="singleStep">
+        <double>0.100000000000000</double>
+       </property>
+       <property name="value">
+        <double>5.000000000000000</double>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="durationLabel">
+       <property name="text">
+        <string>Длительность (мин):</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QSpinBox" name="durationSpinBox">
+       <property name="minimum">
+        <number>1</number>
+       </property>
+       <property name="maximum">
+        <number>500</number>
+       </property>
+       <property name="value">
+        <number>90</number>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="descriptionLabel">
+       <property name="text">
+        <string>Описание:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QTextEdit" name="descriptionTextEdit">
+       <property name="placeholderText">
+        <string>Введите описание фильма</string>
+       </property>
+       <property name="maximumHeight">
+        <number>100</number>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="posterLabel">
+       <property name="text">
+        <string>Постер:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <layout class="QHBoxLayout" name="posterLayout">
+       <item>
+        <widget class="QLineEdit" name="posterLineEdit">
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+         <property name="placeholderText">
+          <string>Путь к файлу постера</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="selectPosterButton">
+         <property name="text">
+          <string>Выбрать</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QLabel" name="posterPreviewLabel">
+     <property name="text">
+      <string>Предпросмотр постера</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>200</width>
+       <height>150</height>
+      </size>
+     </property>
+     <property name="maximumSize">
+      <size>
+       <width>300</width>
+       <height>200</height>
+      </size>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::Box</enum>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="buttonLayout">
+     <item>
+      <spacer name="horizontalSpacer">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>40</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <widget class="QPushButton" name="saveButton">
+       <property name="text">
+        <string>Сохранить</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="cancelButton">
+       <property name="text">
+        <string>Отмена</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
