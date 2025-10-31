@@ -1,4 +1,4 @@
-# Десктопное приложение на Python + PyQt6 для просмотра, добавления и управления рецептами.
+# Десктопное приложение для управления коллекцией фильмов на Python3 + PyQt6.
 
 <!-- ABOUT THE PROJECT -->
 ## О проекте
@@ -105,14 +105,14 @@
 
 ### Сборка standalone версии
 
-1.  Убедитесь, что вы находитесь в папке проекта `qtproject`, где находится `recipe.py`.
+1.  Убедитесь, что вы находитесь в папке проекта `QT_Project`, где находится `main.py`.
 2.  Установите PyInstaller (если ещё не установлен):
     ```bash
     pip install pyinstaller
     ```
 3.  Выполните команду сборки:
     ```bash
-    python -m PyInstaller --onefile --windowed --add-data "ui;ui" --add-data "posters;posters" --add-data "movies.db;." main.pyс
+    pyinstaller --onefile --noconsole --add-data "ui;ui" --add-data "posters;posters" --add-data "movies.db;." --name "MovieLibrary" main.py
     ```
-4.  Готовый файл `main.exe`, будет находиться в папке `dist/` внутри папки проекта.
-5.  При первом запуске `main.exe` рядом с ним будут созданы файл `movies.db` и папка `posters`, если их ещё нет, и они будут использоваться для хранения данных и изображений.
+4.  Готовый файл `MovieLibrary.exe`, будет находиться в папке `dist/` внутри папки проекта.
+5.  При первом запуске `MovieLibrary.exe` рядом с ним будут созданы файл `movies.db` и папка `posters`, если их ещё нет, и они будут использоваться для хранения данных и изображений.
